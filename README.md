@@ -110,7 +110,8 @@ code:
    console as there is a current bug with Ansible and Vagrant.
 
    The build process may take some time. Once it has completed, there will be a
-   file called `datapackage_X.Y.Z-I.deb` in the `ckan-packaging` directory.
+   file called `datapackage_X.Y.Z-I_amd64.deb` in the `ckan-packaging`
+   directory.
 
 5. Update this README file. The commands to download and install the package in
    install instructions above need to be updated with the new package name.
