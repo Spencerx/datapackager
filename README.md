@@ -15,14 +15,14 @@ To install Datapackager:
 
 4. Download the Datapackager package:
 
-        wget INSERT_URL_HERE
+        wget 'https://github.com/okfn/datapackager/releases/download/v0.0.0/datapackager_0.0.0-0_amd64.deb'
 
   (If you get `wget: command not found` then do `sudo apt-get install wget`
   and try again.)
 
 5. Install the package:
 
-        sudo dpkg -i datapackager_1-2_amd64.deb
+        sudo dpkg -i datapackager_0.0.0-0_amd64.deb
 
    If you get this error:
 
@@ -111,3 +111,6 @@ code:
 
    The build process may take some time. Once it has completed, there will be a
    file called `datapackage_X.Y.Z-I.deb` in the `ckan-packaging` directory.
+
+5. Update this README file. The commands to download and install the package in
+   install instructions above need to be updated with the new package name.
