@@ -87,6 +87,10 @@ code:
 
         cd ckan-packaging
 
+4. Update the version number in `ckan-packaging/package.yml` (the `--version`
+   argument to the `fpm` command). We use
+   [Semantic Versioning](http://semver.org/) to decide the version numbers.
+
 4. Create and boot the virtual machine:
 
         vagrant up
@@ -95,10 +99,15 @@ code:
    `ckan-packaging` directory, which in turn runs an Ansible playbook which
    builds the datapackager package.
 
-   You'll be prompted for a build 'iteration' which you should set higher than
-   the latest build, your input will not be output to the console as there is a
-   current bug with Ansible and Vagrant.
+   You'll be prompted for a build 'iteration'. This should normally be `0`,
+   but if for some reason you have to publish a new version of the same package
+   (i.e. nothing in the code changed, but something went wrong in the packaging
+   so the package has to be rebuilt), then you should increase the iteration
+   number. When building the first package for a new version of Datapackager,
+   the iteration number should be reset to `0` again.
 
-   The build process may take some time. Once it has completed, there
-   will be a file called `datapackage_1-{iteration}_amd64.deb` in the
-   `ckan-packaging` directory.
+   When typing the iteration number, your input will not be output to the
+   console as there is a current bug with Ansible and Vagrant.
+
+   The build process may take some time. Once it has completed, there will be a
+   file called `datapackage_X.Y.Z-I.deb` in the `ckan-packaging` directory.
