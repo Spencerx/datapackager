@@ -15,14 +15,14 @@ To install Datapackager:
 
 4. Download the Datapackager package:
 
-        wget 'https://github.com/okfn/datapackager/releases/download/v0.0.0/datapackager_0.0.0-0_amd64.deb'
+        wget 'https://github.com/okfn/datapackager/releases/download/v0.0.1/datapackager_0.0.1-0_amd64.deb'
 
   (If you get `wget: command not found` then do `sudo apt-get install wget`
   and try again.)
 
 5. Install the package:
 
-        sudo dpkg -i datapackager_0.0.0-0_amd64.deb
+        sudo dpkg -i datapackager_0.0.1-0_amd64.deb
 
    If you get this error:
 
@@ -71,11 +71,11 @@ release, follow these steps:
 
 1. Download the new release:
 
-        wget 'https://github.com/okfn/datapackager/releases/download/v0.0.0/datapackager_0.0.1-0_amd64.deb'
+        wget 'https://github.com/okfn/datapackager/releases/download/v0.0.1/datapackager_0.0.1-0_amd64.deb'
 
 2. Install the new release:
 
-        sudo dpkg -i datapackager_0.0.0-0_amd64.deb
+        sudo dpkg -i datapackager_0.0.1-0_amd64.deb
 
 3. Restart Apache:
 
