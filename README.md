@@ -64,6 +64,24 @@ To install Datapackager:
 11. You're done! Datapackager should be running on port 80 on your server.
 
 
+# Updating Datapackager
+
+If you've already installed Datapackager and now you want to upgrade to a new
+release, follow these steps:
+
+1. Download the new release:
+
+        wget 'https://github.com/okfn/datapackager/releases/download/v0.0.0/datapackager_0.0.1-0_amd64.deb'
+
+2. Install the new release:
+
+        sudo dpkg -i datapackager_0.0.0-0_amd64.deb
+
+3. Restart Apache:
+
+        sudo service apache2 restart
+
+
 # Building the Datapackager Ubuntu Package
 
 Note: You'll need a build machine capable of 64-bit virtualization to do this.
