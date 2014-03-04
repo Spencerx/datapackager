@@ -129,3 +129,9 @@ code:
 
 5. Update this README file. The commands to download and install the package in
    install instructions above need to be updated with the new package name.
+
+Once you've followed the above process once, you can re-use the same virtual
+machine to rebuild the package (using the latest code from each git repo) by
+just doing:
+
+    vagrant provision
