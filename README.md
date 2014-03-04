@@ -9,9 +9,9 @@ To install Datapackager:
 
         sudo apt-get update
 
-3. Install the Ubuntu packages that CKAN requires:
+3. Install the Ubuntu packages that Datapackager requires:
 
-        sudo apt-get install -y nginx apache2 libapache2-mod-wsgi libpq5
+        sudo apt-get install -y nginx apache2 libapache2-mod-wsgi libpq5 postgresql solr-jetty
 
 4. Download the Datapackager package:
 
@@ -40,32 +40,28 @@ To install Datapackager:
 
    Then try again.
 
-6. Install PostgreSQL and Solr:
-
-        sudo apt-get install -y postgresql solr-jetty
-
-7. Follow these instructions to setup Solr for CKAN:
+6. Follow these instructions to setup Solr for CKAN:
    <http://docs.ckan.org/en/ckan-2.2/install-from-source.html#setting-up-solr>
 
-8. Follow these instructions to setup PostgreSQL for CKAN:
+7. Follow these instructions to setup PostgreSQL for CKAN:
    <http://docs.ckan.org/en/ckan-2.2/install-from-source.html#postgres-setup>,
    then edit the `sqlalchemy.url` setting in your
    `/etc/ckan/default/production.ini` file and set the correct password,
    database and database user.
 
-9. Initialize your CKAN database:
+8. Initialize your CKAN database:
 
         sudo ckan db init
 
-10. Follow these instructions to enable file uploads:
+9. Follow these instructions to enable file uploads:
     <http://docs.ckan.org/en/ckan-2.2/filestore.html#setup-file-uploads>
 
-11. Restart Apache and Nginx:
+10. Restart Apache and Nginx:
 
         sudo service apache2 restart
         sudo service nginx restart
 
-12. You're done! Datapackager should be running on port 80 on your server.
+11. You're done! Datapackager should be running on port 80 on your server.
 
 
 # Building the Datapackager Ubuntu Package
