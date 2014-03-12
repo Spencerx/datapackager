@@ -93,9 +93,9 @@ code:
    [Virtualbox 4.3](https://www.virtualbox.org), [Git](http://git-scm.com/)
    and [Ansible](http://www.ansible.com/).
 
-2. Clone the `ckan-packaging` git repo, checking out the `tsb-b2` branch:
+2. Clone the `ckan-packaging` git repo, checking out the `datapackager` branch:
 
-        git clone -b tsb-b2 https://github.com/ckan/ckan-packaging.git
+        git clone -b datapackager https://github.com/ckan/ckan-packaging.git
 
 3. Change to the directory that you cloned `ckan-packaging` into:
 
@@ -131,7 +131,7 @@ code:
    install instructions above need to be updated with the new package name.
 
 Once you've followed the above process once, you can re-use the same virtual
-machine to rebuild the package (using the latest code from each git repo) by
-just doing:
+machine to rebuild the package (using the latest code from each git repo).
+Just update the version number in `ckan-packaging/package.yml`, then do:
 
     vagrant provision
