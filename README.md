@@ -101,9 +101,9 @@ code:
 
         cd ckan-packaging
 
-4. Update the version number in `ckan-packaging/package.yml` (the `--version`
-   argument to the `fpm` command). We use
-   [Semantic Versioning](http://semver.org/) to decide the version numbers.
+4. Update the version number in `package.yml` (the `--version` argument to 
+   the `fpm` command). We use [Semantic Versioning](http://semver.org/) to 
+   decide the version numbers.
 
 4. Create and boot the virtual machine:
 
