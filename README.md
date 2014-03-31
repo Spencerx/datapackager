@@ -15,16 +15,19 @@ To install Datapackager:
 
         sudo apt-get install -y nginx apache2 libapache2-mod-wsgi libpq5 postgresql solr-jetty
 
-4. Download the Datapackager package:
+4. Download the latest version of the Datapackager package from the
+   [releases page](https://github.com/okfn/datapackager/releases), for example
+   (replacing the URL with the URL of the deb file for the latest release):
 
-        wget 'https://github.com/okfn/datapackager/releases/download/v0.0.1/datapackager_0.0.1-0_amd64.deb'
+        wget 'https://github.com/okfn/datapackager/releases/download/vX.Y.Z/datapackager_X.Y.Z-I_amd64.deb'
 
   (If you get `wget: command not found` then do `sudo apt-get install wget`
   and try again.)
 
-5. Install the package:
+5. Install the package, for example (replacing the filename with the name of
+   the file you downloaded):
 
-        sudo dpkg -i datapackager_0.0.1-0_amd64.deb
+        sudo dpkg -i datapackager_X.Y.Z-I_amd64.deb
 
    If you get this error:
 
@@ -71,13 +74,16 @@ To install Datapackager:
 If you've already installed Datapackager and now you want to upgrade to a new
 release, follow these steps:
 
-1. Download the new release:
+1. Download the new release from the
+   [releases page](https://github.com/okfn/datapackager/releases), for example
+   (replacing the URL with the URL of the deb file for the latest release):
 
-        wget 'https://github.com/okfn/datapackager/releases/download/v0.0.1/datapackager_0.0.1-0_amd64.deb'
+        wget 'https://github.com/okfn/datapackager/releases/download/vX.Y.Z/datapackager_X.Y.Z-I_amd64.deb'
 
-2. Install the new release:
+2. Install the new release, for example (replacing the filename with the name
+   of the file you downloaded):
 
-        sudo dpkg -i datapackager_0.0.1-0_amd64.deb
+        sudo dpkg -i datapackager_X.Y.Z-I_amd64.deb
 
 3. Restart Apache:
 
@@ -103,8 +109,8 @@ code:
 
         cd ckan-packaging
 
-4. Update the version number in `package.yml` (the `--version` argument to 
-   the `fpm` command). We use [Semantic Versioning](http://semver.org/) to 
+4. Update the version number in `package.yml` (the `--version` argument to
+   the `fpm` command). We use [Semantic Versioning](http://semver.org/) to
    decide the version numbers.
 
 4. Create and boot the virtual machine:
@@ -128,9 +134,6 @@ code:
    The build process may take some time. Once it has completed, there will be a
    file called `datapackage_X.Y.Z-I_amd64.deb` in the `ckan-packaging`
    directory.
-
-5. Update this README file. The commands to download and install the package in
-   install instructions above need to be updated with the new package name.
 
 Once you've followed the above process once, you can re-use the same virtual
 machine to rebuild the package (using the latest code from each git repo).
