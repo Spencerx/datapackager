@@ -2,7 +2,7 @@
 
 ## Installing Data Packager
 
-To install Datapackager:
+To install Data Packager:
 
 1. Get an Ubuntu 12.04, 64-bit server or virtual machine, ssh into it and
    follow the steps below.
@@ -11,11 +11,11 @@ To install Datapackager:
 
         sudo apt-get update
 
-3. Install the Ubuntu packages that Datapackager requires:
+3. Install the Ubuntu packages that Data Packager requires:
 
         sudo apt-get install -y nginx apache2 libapache2-mod-wsgi libpq5 postgresql solr-jetty
 
-4. Download the latest version of the Datapackager package from the
+4. Download the latest version of the Data Packager package from the
    [releases page](https://github.com/okfn/datapackager/releases), for example
    (replacing the URL with the URL of the deb file for the latest release):
 
@@ -66,12 +66,12 @@ To install Datapackager:
         sudo service apache2 restart
         sudo service nginx restart
 
-11. You're done! Datapackager should be running on port 80 on your server.
+11. You're done! Data Packager should be running on port 80 on your server.
 
 
 ## Updating Data Packager
 
-If you've already installed Datapackager and now you want to upgrade to a new
+If you've already installed Data Packager and now you want to upgrade to a new
 release, follow these steps:
 
 1. Download the new release from the
@@ -94,7 +94,7 @@ release, follow these steps:
 
 Note: You'll need a build machine capable of 64-bit virtualization to do this.
 
-To build a new version of the Datapackager Ubuntu package containing the latest
+To build a new version of the Data Packager Ubuntu package containing the latest
 code:
 
 1. Install [Vagrant 1.4](http://www.vagrantup.com/),
@@ -119,20 +119,20 @@ code:
 
    This will create a virtual machine and run the Vagrantfile in the
    `ckan-packaging` directory, which in turn runs an Ansible playbook which
-   builds the datapackager package.
+   builds the Data Packager package.
 
    You'll be prompted for a build 'iteration'. This should normally be `0`,
    but if for some reason you have to publish a new version of the same package
    (i.e. nothing in the code changed, but something went wrong in the packaging
    so the package has to be rebuilt), then you should increase the iteration
-   number. When building the first package for a new version of Datapackager,
+   number. When building the first package for a new version of Data Packager,
    the iteration number should be reset to `0` again.
 
    When typing the iteration number, your input will not be output to the
    console as there is a current bug with Ansible and Vagrant.
 
    The build process may take some time. Once it has completed, there will be a
-   file called `datapackage_X.Y.Z-I_amd64.deb` in the `ckan-packaging`
+   file called `datapackager_X.Y.Z-I_amd64.deb` in the `ckan-packaging`
    directory.
 
 Once you've followed the above process once, you can re-use the same virtual
